@@ -1,8 +1,9 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/sdk:7.0
 
 ARG UIPATH_CLI_VERSION
 ENV UIPATH_CLI_VERSION=${UIPATH_CLI_VERSION:-23.2.8467.25277}
 ENV UIPATH_CLI_WORKING_DIR=/uipath/uipath.cli/$UIPATH_CLI_VERSION/tools
+ENV DOTNET_ROLL_FORWARD=LatestMajor
 
 WORKDIR /uipath
 
