@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t $IMAGE_NAME:$SOURCE_BRANCH -t $IMAGE_NAME:latest  --build-arg UIPATH_CLI_VERSION=$SOURCE_BRANCH .
+docker build -t $DOCKER_REPO:$SOURCE_BRANCH -t $DOCKER_REPO:latest  --build-arg UIPATH_CLI_VERSION=$SOURCE_BRANCH .
