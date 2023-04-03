@@ -1,0 +1,2 @@
+#!/bin/bash
+docker build -t $IMAGE_NAME:$UIPATH_CLI_VERSION -t $IMAGE_NAME:latest  --build-arg UIPATH_CLI_VERSION=$UIPATH_CLI_VERSION .
