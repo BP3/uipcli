@@ -3,4 +3,4 @@ if [ "$UIPCLI_VERSION_TAG" = "" ]; then
     export UIPCLI_VERSION_TAG=$SOURCE_BRANCH
 fi
 
-docker build -t ${DOCKER_REPO}:$UIPCLI_VERSION_TAG -t ${DOCKER_REPO}:latest --build-arg UIPATH_CLI_VERSION=$UIPCLI_VERSION_TAG .
+docker build --no-cache -t ${DOCKER_REPO}:$UIPCLI_VERSION_TAG -t ${DOCKER_REPO}:latest --build-arg UIPATH_CLI_VERSION=$UIPCLI_VERSION_TAG .
