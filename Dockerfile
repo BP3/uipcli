@@ -23,6 +23,8 @@ RUN apt-get update && apt-get install -y && rm -rf /var/lib/get/lists/* \
     && dotnet add package UiPath.CLI --version $UIPATH_CLI_VERSION -n \
     && dotnet add package UiPath.CLI --version $UIPATH_CLI_VERSION --package-directory .; exit 0
 
+# Switch to where the CLI tooling resides and make sure the DLL is executable
+WORKDIR $UIPATH_CLI_WORKING_DIR
 RUN chmod +x $UIPATH_CLI_WORKING_DIR/uipcli.dll
 
 COPY uipcli.sh /
