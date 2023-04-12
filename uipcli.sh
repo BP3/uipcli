@@ -13,6 +13,9 @@ if [[ -n "$CI" ]]; then
     exec /bin/bash
 # Otherwise we are running outside of a CI / CD environment, so execute the command line wrapper script directly
 else
+    # We are shifting because we want users to be consistent in its use and specify the '/uipcli.sh' script
+    # that needs to be specified if running in a CI / CD environment, which will appear as
+    # the first parameter passed into this script
     shift
     exec dotnet "$UIPATH_CLI_WORKING_DIR"/uipcli.dll "$@"
 fi
