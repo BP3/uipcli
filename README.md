@@ -20,6 +20,13 @@ To get help on a specific verb (action), for example, running test sets, use the
 docker run bp3global/uipcli /uipcli.sh test
 ```
 
+### Usage with GitLab
+To use within a GitLab pipeline build, as an example, use the following command:
+```yaml
+image: bp3global/uipcli
+script: /uipcli.sh test...
+```
+
 ## Note on Vulnerabilities
 The vulnerability scan automatically performed by DockerHub when this image is built does report a number of 
 vulnerabilities.
