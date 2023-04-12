@@ -30,5 +30,4 @@ RUN chmod +x $UIPATH_CLI_WORKING_DIR/uipcli.dll
 COPY uipcli.sh /
 RUN chmod +x /uipcli.sh
 
-ENTRYPOINT [ "/uipcli.sh" ]
-CMD [ "help" ]
+CMD [ "/uipcli.sh", "help" ]
