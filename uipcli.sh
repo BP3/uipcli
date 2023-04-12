@@ -12,4 +12,4 @@ fi
 echo "After shifting by 3"
 echo "$@"
 
-#exec dotnet "$UIPATH_CLI_WORKING_DIR"/uipcli.dll "$@"
+exec dotnet "$UIPATH_CLI_WORKING_DIR"/uipcli.dll "$@"
