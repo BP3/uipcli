@@ -12,25 +12,12 @@ See the following UiPath documentation links for more information on the CLI usa
 ## Usage
 To get more help on the available verbs (actions) and the CLI version, use the following command:
 ```shell
-docker run bp3global/uipcli [help]
+docker run bp3global/uipcli /uipcli.sh [help]
 ```
 
 To get help on a specific verb (action), for example, running test sets, use the following command:
 ```shell
-docker run bp3global/uipcli test
-```
-
-### Usage with GitLab
-By default the Docker executor doesn't override the `ENTRYPOINT` of a Docker image and passes `sh` or `bash` as `COMMAND` 
-to start a container that runs the job script. See [Override an image's entrypoint](https://docs.gitlab.com/ee/ci/yaml/#imageentrypoint).
-
-To ensure your GitLab job will run on this container you must override the image's ENTRYPOINT in the project configurataion as follows:
-```
-# Equivalent of 
-# docker run --entrypoint "" bp3global/uipcli sh -c "echo 'It works!'"
-image:
-    name: bp3global/uipcli
-    entrypoint: [""]
+docker run bp3global/uipcli /uipcli.sh test
 ```
 
 ## Note on Vulnerabilities
